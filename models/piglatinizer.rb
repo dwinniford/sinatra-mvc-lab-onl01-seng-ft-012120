@@ -15,9 +15,8 @@ class PigLatinizer
       arr = word.chars
       prefix_arr = []
       arr.each do |char|
-        until char.match?(/[aeiou]/) do 
-          prefix_arr << char 
-        end 
+        break if char.match?(/[aeiou]/) 
+        prefix_arr << arr.shift 
       end 
       arr.join + prefix_arr.join + "ay"
     end 

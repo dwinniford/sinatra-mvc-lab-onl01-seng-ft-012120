@@ -18,6 +18,7 @@ class PigLatinizer
         break if char.match?(/[aeiou]/) 
         prefix_arr << char 
       end 
+      arr.shift(prefix_arr.length)
       arr.join + prefix_arr.join + "ay"
     end 
   end 

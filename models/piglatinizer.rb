@@ -12,7 +12,7 @@ class PigLatinizer
     if word.split.first.match(/[aeiou]/)
       word + "way"
     else
-      
+      arr = word.split
     end 
   end 
   

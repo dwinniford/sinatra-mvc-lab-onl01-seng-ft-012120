@@ -9,10 +9,16 @@ class PigLatinizer
   end 
   
   def piglatinize_word(word)
-    if word.split.first.match(/[aeiou]/)
+    if word.chars.first.match(/[aeiou]/)
       word + "way"
     else
-      arr = word.split
+      arr = word.chars
+      prefix_arr = []
+      arr.each do |char|
+        until char.match(/[aeiou]/) do 
+          
+        end 
+      end 
     end 
   end 
   

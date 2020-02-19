@@ -26,7 +26,7 @@ class PigLatinizer
   
   def piglatinize_text
     text_to_arr.map do |word|
-      word.piglatinize_word
+      piglatinize_word(word)
     end.join(" ") 
   end 
   

@@ -6,7 +6,7 @@ class PigLatinizer
   end 
   
   def text_to_arr
-    @user_text.split
+    @user_text.strip.split
   end 
   
   def piglatinize_word(word)
@@ -25,7 +25,11 @@ class PigLatinizer
   end 
   
   def piglatinize_text
+    text_to_arr.map do |word|
+      word.piglatinize_word
+    end.join(" ") 
   end 
+  
 end 
 
 

@@ -1,13 +1,17 @@
 class PigLatinizer
   attr_accessor :user_text
   
-  def initialize(user_text)
+  def initialize
     @user_text= user_text
   end 
   
-  def text_to_arr
-    @user_text.split(" ")
+  def piglatinize(text)
+    piglatinize_text(@user_text.split(" "))
   end 
+  
+  # def text_to_arr(text)
+  #   @text_arr = @user_text.split(" ")
+  # end 
   
   def piglatinize_word(word)
     if word.chars.first.match(/[aeiou]/)
@@ -24,8 +28,8 @@ class PigLatinizer
     end 
   end 
   
-  def piglatinize_text
-    text_to_arr.map do |word|
+  def piglatinize_text(arr)
+    arr.map do |word|
       piglatinize_word(word)
     end.join(" ") 
   end 

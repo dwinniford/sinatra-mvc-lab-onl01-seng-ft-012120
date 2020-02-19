@@ -6,6 +6,7 @@ class PigLatinizer
   end 
   
   def text_to_arr
+    @user_text.split
   end 
   
   def piglatinize_word(word)

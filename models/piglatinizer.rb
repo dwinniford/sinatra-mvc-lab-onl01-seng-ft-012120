@@ -13,7 +13,7 @@ class PigLatinizer
   # end 
   
   def piglatinize_word(word)
-    if word.chars.first.match(/[aeiou]/)
+    if word.chars.first.match(/[aeiouAEIOU]/)
       word + "way"
     else
       arr = word.chars
